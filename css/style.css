@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Spinning card animation! Yay. */
+
+@keyframes spin-back {
+  0% {
+    transform: rotateY(-179deg);
+  }
+  20% {
+    transform: rotateY(180deg);
+  }
+  50% {
+    transform: rotateY(-179deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes spin-front {
+  0% {
+    transform: rotateY(0deg);
+  }
+  20% {
+    transform: rotateY(360deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+/*@keyframes infinite-spinning-front {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}*/
+
+/* Setting up front & back of card */
+
+div#sparky {
+  position: relative;
+  height: 300px;
+  width: 200px;
+  margin: 0 auto;
+}
+div#sparky.spinning .front {
+  animation: spin-front 1.5s;
+  animation-timing-function: linear;
+}
+div#sparky.spinning .back {
+  animation: spin-back 1.5s;
+  animation-timing-function: linear;
+}
+
+div#sparky h1 {
+  font-size: 3em;
+}
+div#sparky p {
+  font-size: 1.35em;
+}
+
+div#sparky .front,
+div#sparky .back {
+  position:absolute;
+  top: 0;
+  left: 0;
+  height: 280px;
+  width: 200px;
+  border: 10px solid #EEE;
+  backface-visibility: hidden;
+  transition: all 1s;
+  text-align:center;
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.5)
+}
+
+div#sparky .front {
+  background-color: rebeccapurple;
+  background-image: url(../img/sparky.png);
+  background-size: cover;
+  background-position: center;
+}
+
+div#sparky .back {
+  background-color: #FFF;
+  transform: rotateY(-179deg);
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+/* Flippin' em over */
+div#sparky.flip .front {
+  transform: rotateY(-179deg);
+}
+
+div#sparky.flip .back {
+  transform: rotateY(0deg);
+}
+
+/* Visuals for the rest of the site... */
+
+body {
+  font-family: 'Droid Sans', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-size: 12px;
+  padding:0;
+  margin:0;
+  background-color: #000;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+  color: #ff6e6e;
+}
+
+.container {
+  background-color:rebeccapurple;
+  border: 1px solid;
+}
+header, .main, footer {
+  padding: 3em;
+  text-align: center;
+}
+header, footer {
+  color: #FFF;
+  background-color: #000;
+  padding: 1em;
+}
+header h1 {
+  font-size: 2.25em;
+}
+header p {
+  font-size: 1.25em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+  width: 100%;
+  font-size: 1.75em;
+}
+footer a {
+  color: #369;
+  text-decoration: none;
+
+}
+footer a:hover {
+  color: #DDD;
+}
+.heart {
+  color: #ff6e6e;  
+}
