@@ -156,9 +156,6 @@ header p {
 }
 
 footer {
-/*   position: fixed; */
-  bottom: 0;
-  left: 0;
   padding: 1em;
   width: 100%;
   font-size: 1.75em;
@@ -173,4 +170,17 @@ footer a:hover {
 }
 .heart {
   color: #ff6e6e;  
+}
+
+@media(min-width: 768px){
+  div#sparky,
+  div#sparky .front,
+  div#sparky .back {
+    height: 350px;
+    width: 250px
+  }
+  div#sparky .sparky-image {
+    width: 150px;
+    height: 150px
+  }
 }
