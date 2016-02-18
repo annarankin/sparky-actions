@@ -6,7 +6,7 @@ var sparkyActions = [
   "Sparky doesn't want to wear his hood right now.",
   "Sparky is scared!",
   "Sparky wants to be carried by someone else.",
-  "Sparky got a hold of something he shouldn't have.",
+  "Sparky got ahold of something he shouldn't have.",
   "Sparky takes off his clothes and runs around.",
   "Sparky chases a cat/rat/small child/laser pointer/etc",
   "Sparky wants to be like Ragna when he grows up",
