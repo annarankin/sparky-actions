@@ -4,6 +4,35 @@
 }
 
 /* Spinning card animation! Yay. */
+@-webkit-keyframes spin-back {
+  0% {
+    transform: rotateY(-179deg);
+  }
+  20% {
+    transform: rotateY(180deg);
+  }
+  50% {
+    transform: rotateY(-179deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+@-webkit-keyframes spin-front {
+  0% {
+    transform: rotateY(0deg);
+  }
+  20% {
+    transform: rotateY(360deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
 
 @keyframes spin-back {
   0% {
@@ -34,14 +63,6 @@
     transform: rotateY(360deg);
   }
 }
-/*@keyframes infinite-spinning-front {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
-}*/
 
 /* Setting up front & back of card */
 
@@ -52,10 +73,14 @@ div#sparky {
   margin: 0 auto;
 }
 div#sparky.spinning .front {
+  -webkit-animation: spin-front 1.5s;
+  -webkit-animation-timing-function: linear;
   animation: spin-front 1.5s;
   animation-timing-function: linear;
 }
 div#sparky.spinning .back {
+  -webkit-animation: spin-back 1.5s;
+  -webkit-animation-timing-function: linear;
   animation: spin-back 1.5s;
   animation-timing-function: linear;
 }
