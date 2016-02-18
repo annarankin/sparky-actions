@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 /* Spinning card animation! Yay. */
@@ -65,6 +66,14 @@ div#sparky h1 {
 div#sparky p {
   font-size: 1.35em;
 }
+div#sparky .sparky-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: url(../img/sparky.png);
+  background-size: cover;
+  
+}
 
 div#sparky .front,
 div#sparky .back {
@@ -84,6 +93,7 @@ div#sparky .back {
 }
 
 div#sparky .front {
+  border-width: 2px;
   background-color: rebeccapurple;
   background-image: url(../img/sparky.png);
   background-size: cover;
@@ -126,23 +136,27 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid;
 }
 header, .main, footer {
-  padding: 3em;
+  padding: 1em;
   text-align: center;
+}
+.main {
+  padding: 4em
 }
 header, footer {
   color: #FFF;
   background-color: #000;
-  padding: 1em;
 }
 header h1 {
-  font-size: 2.25em;
+  font-size: 2.55em;
+  margin: 0.25em;
 }
 header p {
   font-size: 1.25em;
+  margin: 0.25em
 }
 
 footer {
-  position: fixed;
+/*   position: fixed; */
   bottom: 0;
   left: 0;
   padding: 1em;
